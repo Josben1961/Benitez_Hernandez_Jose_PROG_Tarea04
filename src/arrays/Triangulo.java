@@ -12,4 +12,17 @@ public class Triangulo {
 		this.vertC=vertC;
 	}
 
+	public Punto getVertA() {
+		return vertA;
+	}
+
+	public Punto getVertB() {
+		return vertB;
+	}
+
+	public Punto getVertC() {
+		return vertC;
+	}
+	
+
 }
