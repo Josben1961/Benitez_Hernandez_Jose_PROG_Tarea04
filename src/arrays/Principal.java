@@ -24,7 +24,7 @@ public class Principal {
 		 */
 		Punto[] arrayPuntos = new Punto[cantTriangulos * 3];
 		
-		//Relleno el array con puntos aleatorios
+		//Relleno el array con puntos aleatorios con la función Math.random().
 		for (int i = 0; i < arrayPuntos.length; i++) {
 			arrayPuntos[i] = new Punto((double) (Math.random() * 10), (double) (Math.random() * 10));
 		}
@@ -32,15 +32,15 @@ public class Principal {
 		//Creo el array para la cantidad de triángulos
 		Triangulo[] arrayTriangulos = new Triangulo[cantTriangulos];
 		
-				
-				// Definición de los puntos de mi triángulo
-				Punto A = new Punto(0, 5);
+		// Definición de los puntos de mi triángulo
+		Punto A = new Punto(0, 5);
 
-				Punto B = new Punto(10, 14);
+		Punto B = new Punto(10, 14);
 
-				Punto C = new Punto(7, 15);
+		Punto C = new Punto(7, 15);
 
-				Triangulo miTriangulo = new Triangulo(A, B, C);
+		Triangulo miTriangulo = new Triangulo(A, B, C);		
+			
 
 	}
 
