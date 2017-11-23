@@ -39,7 +39,18 @@ public class Principal {
 
 		Punto C = new Punto(7, 15);
 
-		Triangulo miTriangulo = new Triangulo(A, B, C);		
+		Triangulo miTriangulo = new Triangulo(A, B, C);	
+		
+		// Cálculo de la suma de perímetros
+				for (int i = 0; i < cantTriangulos; i++) {
+					arrayTriangulos[i] = new Triangulo(arrayPuntos[contPuntos], 
+					arrayPuntos[contPuntos + 1],arrayPuntos[contPuntos + 2]);
+					contPuntos += 3;		
+					
+					periSuma = periSuma + arrayTriangulos[i].perimetro();
+				}
+				// Calculo la media de los perímetros
+				perimMedia = periSuma / cantTriangulos;
 			
 
 	}
