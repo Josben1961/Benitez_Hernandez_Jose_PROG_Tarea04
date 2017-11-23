@@ -21,13 +21,11 @@ public class Punto {
 		return "Punto [x=" + x + ", y=" + y + "]";
 	}
 	public double distancia(Punto puntoParam) {
-		 double x1=x;
-		 double y1=y;
-		 double x2 = puntoParam.getX();
-		 double y2 = puntoParam.getY();
-		
-		 double distancia = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
-		 return distancia;
+		double x1 = puntoParam.x;
+		double y1 = puntoParam.y;
+
+		double distancia = Math.sqrt(Math.pow(x1 - x, 2) + Math.pow(y1 - y, 2));
+		return distancia;
 	 }
 
 }
