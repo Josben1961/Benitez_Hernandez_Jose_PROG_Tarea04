@@ -41,6 +41,10 @@ public class Principal {
 
 		Triangulo miTriangulo = new Triangulo(A, B, C);	
 		
+		// Objetos para triángulo mayor y triángulo menor
+				Triangulo triMayor = new Triangulo(A, B, C);
+				Triangulo triMenor = new Triangulo(A, B, C);
+		
 		// Cálculo de la suma de perímetros
 				for (int i = 0; i < cantTriangulos; i++) {
 					arrayTriangulos[i] = new Triangulo(arrayPuntos[contPuntos], 
@@ -52,6 +56,34 @@ public class Principal {
 				// Calculo la media de los perímetros
 				perimMedia = periSuma / cantTriangulos;
 			
+				// Definimos el triángulo mayor y el menor
+				for (int i = 0; i < cantTriangulos; i++) {
+
+					if (arrayTriangulos[i].perimetro() > perimMedia) {
+						mayorQueMedia++;
+					}
+					if (arrayTriangulos[i].perimetro() < perimMedia) {
+						menorQueMedia++;
+					}
+					if (arrayTriangulos[i].perimetro() == periMayor) {
+						triMayor = arrayTriangulos[i];
+					}
+					if (arrayTriangulos[i].perimetro() > periMayor) {
+						triMenor = arrayTriangulos[i];
+					}
+
+				}
+
+				System.out.println("La media es: " + perimMedia);
+				
+				System.out.println("Tenemos " + mayorQueMedia + " triangulos con un perímetro superior a la media");
+				
+				System.out.println("Tenemos " + menorQueMedia + " con un perímetro inferior a la media");
+
+				System.out.println("El triangulo mayor tiene de vértices: " + triMayor.toString());
+
+				System.out.println("El triangulo menor tiene de vértices: " + triMenor.toString());
+
 
 	}
 
