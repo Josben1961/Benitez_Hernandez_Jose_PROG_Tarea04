@@ -26,16 +26,17 @@ public class Triangulo {
 
 	@Override
 	public String toString() {
-		return "Triangulo [vertA=" +vertA.toString() + ", vertB=" + vertB.toString() +
-				", vertC=" + vertC.toString() + "]";
+		return "Triangulo [vertA=" + vertA.toString() + ", vertB=" + vertB.toString() + ", vertC=" + vertC.toString()
+				+ "]";
 	}
-	//Método para calcular el perímetro
+
+	// Método para calcular el perímetro
 	public double perimetro() {
 		double ladoAB = vertA.distancia(vertB);
 		double ladoBC = vertB.distancia(vertC);
 		double ladoCA = vertC.distancia(vertA);
 		double perimetro = (ladoAB + ladoBC + ladoCA);
 		return perimetro;
-	} 
-		
+	}
+
 }
